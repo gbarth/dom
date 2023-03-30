@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #04</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body class="conteudo exercicio">
+    <div>
+        <p>Início</p>
+    </div>
+    <div>
+        <ul>
+            <li>Pedro</li>
+            <li>Ana</li>
+            <li>Bia</li>
+        </ul>
+    </div>
+    <div>
+        <p>Fim</p>
+    </div>
+    <script>
+        const lista = document.querySelector('div ul')
+        console.log(lista.parentNode) 
+        console.log(lista.childNodes) /* Retorna uma NodeList, mas com os espaços entre os elementos da lista */
+
+        const primeiro = lista.firstChild
+        console.log(primeiro) /* Text */
+        console.log(primeiro.nextSibling) /* List item */
+
+        const ultimo = lista.lastChild
+        console.log(ultimo) /* Text */
+        console.log(ultimo.previousSibling) /* List item */
+
+        console.log(lista.children) /* Retorna um HTMLCollection, mas sem os espaços, apenas os elementos */
+        console.log(lista.firstElementChild)
+        console.log(lista.lastElementChild)
+        console.log(lista.parentNode.previousElementSibling)
+        console.log(lista.parentNode.nextElementSibling)
+
+        console.log(document.querySelectorAll('div ul li')) /* Retorna um NodeList ( mais adequado ) */
+    </script>
+</body>
+
+</html>
